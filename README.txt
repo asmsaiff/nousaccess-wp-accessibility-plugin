@@ -1,21 +1,21 @@
-=== Learnegy Core ===
-Contributors: saifullahsiddique, mamurjorit
-Donate link: https://mamurjor.com
-Tags: learnegy-theme-companion
-Requires at least: 5.0.0
-Tested up to: 5.9.2
+=== Access Bee ===
+Contributors: saifullahsiddique
+Donate link: https://saifullah.co
+Tags: access-bee
+Requires at least: 6.1.1
+Tested up to: 6.1.1
 Stable tag: 1.0.0
 Requires PHP: 8.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Learnegy Theme Companion
+Access Bee
 
 == Description ==
 
-This plugin is the companion for the Learnegy theme, it runs and adds its enhancements only if the Learnegy theme is installed and active. 
+This plugin helps to improve accessibility in your WordPress site.
 
-You don't need to configure anything after install and activate. Just activate and then you can see the full theme option in the customizer with front-page template sections.
+You don't need to configure anything after install and activate. Just activate and then you can see the accessibility option over the site pages.
 
 == Installation ==
 

@@ -33,24 +33,27 @@
         // Exit if accessed directly.
     }
     
-    define( 'LEARNEGY_PATH', plugin_dir_url( __FILE__ ) );
+    define( 'ACCESSBEE_PATH', plugin_dir_path( __FILE__ ) );
 
-    function learnegy_front_page_template_add( $templates ) {
-        $templates[wp_normalize_path( plugin_dir_path( __FILE__ ) . '/templates/front.php' )] = __( 'Front Page', 'learnegy' ); 
-
-        return $templates;
+    function custom_content_after_body_open_tag() {
+        require_once ACCESSBEE_PATH . 'template/accessibility.php';
     }
-    add_filter( 'theme_page_templates', 'learnegy_front_page_template_add' );
+    add_action('wp_body_open', 'custom_content_after_body_open_tag');
 
+    /**
+     * Enqueue stylesheets for WP Accessibility.
+     */
+    function wpa_stylesheet() {
+        // Add CSS
+        wp_register_style( 'accessbee-css', plugins_url('/access-bee/css/accessbee.css'));
+        wp_enqueue_style( 'accessbee-css' );
+        wp_register_style( 'bootstrap-css', plugins_url('/access-bee/css/bootstrap.css'));
+        wp_enqueue_style( 'bootstrap-css' );
+        wp_register_style( 'fa-css', plugins_url('/access-bee/css/all.css'));
+        wp_enqueue_style( 'fa-css' );
 
-    function learnegy_front_page_template($template) {
-        if (is_page()) {
-            $meta = get_post_meta(get_the_ID());
-            if (strpos($meta['_wp_page_template'][0], 'front.php') !== false) {
-                $template = $meta['_wp_page_template'][0];
-            }
-        }
-
-        return $template;
+        // Add JS
+        wp_register_script( 'accessbee-js', plugins_url('/access-bee/js/accessbee.js'));
+        wp_enqueue_script( 'accessbee-js' );
     }
-    add_filter( 'template_include', 'learnegy_front_page_template', 99 );
+    add_action( 'wp_enqueue_scripts', 'wpa_stylesheet' );
