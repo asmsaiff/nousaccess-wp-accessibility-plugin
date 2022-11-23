@@ -1,11 +1,10 @@
 <?php
+	/**
+	 * Fired when the plugin is uninstalled.
+	 * @link       https://saifullah.co
+	 * @since      1.0.0
+	 */
 
-/**
- * Fired when the plugin is uninstalled.
- * @link       https://mamurjor.com
- * @since      1.0.0
- */
-
-if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
-	exit;
-}
+	if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
+		exit;
+	}

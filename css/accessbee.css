@@ -1,0 +1,239 @@
+/* Accessibility */
+.accessibility-wrapper {
+    height: 100vh;
+    z-index: 999999999999;
+}
+
+.accessibility-buttons {
+    background-color: rgba(34,34,34,.75);
+}
+#open-accessibility {
+	width: max-content;
+	height: max-content;
+	font-size: 30px;
+	background-color: #7A1669;
+	padding: 6px !important;
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+.accessibility-buttons {
+    margin-left: -1000px;
+    transition: .3s all ease-in-out;
+}
+/* @media screen and (max-width: 768px) {
+    .accessibility-buttons {
+        margin-left: -211px;
+    }
+} */
+.accessibility-buttons.open {
+    margin-left: 0;
+}
+#accessibilityBar {
+    max-width: 300px;
+}
+#accessibilityBar button,
+#accessibilityBar a {
+    display: block;
+    width: 100%;
+    background-color: #fff;
+}
+#accessibilityBar button.setAccessibility strong,
+#accessibilityBar a.setAccessibility strong  {
+    color: #fff;
+    background-color: #00C342;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: .2rem;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-right: .25rem;
+}
+#accessibilityBar button.setAccessibility,
+#accessibilityBar a.setAccessibility {
+    font-size: 12px;
+    font-size: .75rem;
+    transition: all .3s ease-in-out;
+    color: #222;
+    font-weight: 700;
+    background-color: #eee;
+    width: 100%;
+    padding: .1rem .2rem;
+    border-radius: .25rem;
+    border: none;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 0.15rem 0;
+}
+
+/* Focus Link */
+a:active,
+a:focus,
+button:focus {
+    border: 2px solid #00C342 !important;
+}
+
+body.darkmode button,
+body.darkmode img,
+body.darkmode video,
+body.darkmode form,
+body.darkmode iframe {
+    filter: invert(90) contrast(100%) !important;
+}
+
+body.darkmode button,
+body.darkmode button span,
+body.darkmode button i {
+    color: #000 !important;
+}
+
+body.darkmode,
+body.darkmode article, 
+body.darkmode aside,
+body.darkmode footer, 
+body.darkmode header, 
+body.darkmode a, 
+body.darkmode i, 
+body.darkmode .link, 
+body.darkmode nav, 
+body.darkmode div,
+body.darkmode ol,
+body.darkmode span, 
+body.darkmode svg,
+body.darkmode h1, 
+body.darkmode h2, 
+body.darkmode h3, 
+body.darkmode h4, 
+body.darkmode h5, 
+body.darkmode h6,
+body.darkmode p {
+    color: #fff !important;
+}
+
+
+
+body.darkmode,
+body.darkmode footer,
+body.darkmode div,
+body.darkmode article,
+body.darkmode section,
+body.darkmode header,
+/* body.darkmode a, */
+body.darkmode footer,
+body.darkmode aside,
+body.darkmode .card,
+body.darkmode .sub-menu,
+body.darkmode .accordion-body,
+body.darkmode main {
+    background-color: #121212 !important;
+}
+
+
+/* Monochrome */
+body.contrast {
+    background: hsla(0,5%,92%,.3)!important;
+    color: #6b6a6a!important;
+}
+
+body.contrast div:not(.position-fixed), 
+body.contrast #accessibility,
+body.contrast article, 
+body.contrast aside, 
+body.contrast footer, 
+body.contrast header, 
+body.contrast li, 
+body.contrast main, 
+body.contrast nav, 
+body.contrast ol, 
+body.contrast section, 
+body.contrast svg, 
+body.contrast a, 
+body.contrast span,
+body.contrast h1, 
+body.contrast h2, 
+body.contrast h3, 
+body.contrast h4, 
+body.contrast h5, 
+body.contrast h6, 
+body.contrast p, 
+body.contrast img,
+body.contrast video {
+    filter: grayscale(100%) contrast(100%);
+}
+
+/* Big Cursor */
+body.cursormode,
+body.cursormode article, 
+body.cursormode aside, 
+body.cursormode footer, 
+body.cursormode header, 
+body.cursormode li, 
+body.cursormode main, 
+body.cursormode nav, 
+body.cursormode ol, 
+body.cursormode section, 
+body.cursormode a, 
+body.cursormode a:hover, 
+body.cursormode a:focus, 
+body.cursormode a:active, 
+body.cursormode span, 
+body.cursormode h1, 
+body.cursormode h2, 
+body.cursormode h3, 
+body.cursormode h4, 
+body.cursormode h5, 
+body.cursormode h6, 
+body.cursormode p,
+body.cursormode button:hover,
+body.cursormode img,
+body.cursormode img:hover,
+body.cursormode li:hover,
+body.cursormode p:hover {
+    cursor: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjI5LjE4OHB4IiBoZWlnaHQ9IjQzLjYyNXB4IiB2aWV3Qm94PSIwIDAgMjkuMTg4IDQzLjYyNSIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjkuMTg4IDQzLjYyNSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGc+PHBvbHlnb24gZmlsbD0iI0ZGRkZGRiIgc3Ryb2tlPSIjRDlEQUQ5IiBzdHJva2Utd2lkdGg9IjEuMTQwNiIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBwb2ludHM9IjIuOCw0LjU0OSAyNi44NDcsMTkuOTAyIDE2Ljk2NCwyMi43MDEgMjQuMjM5LDM3Ljc0OSAxOC4yNzgsNDIuMDE3IDkuNzQxLDMwLjcyNCAxLjEzOCwzNS44MDkgIi8+PGc+PGc+PGc+PHBhdGggZmlsbD0iIzIxMjYyNyIgZD0iTTI5LjE3NSwyMS4xNTVjMC4wNzEtMC42MTMtMC4xNjUtMS4yNTMtMC42MzUtMS41NzNMMi4xNjUsMC4yNThjLTAuNDI0LTAuMzItMC45ODgtMC4zNDYtMS40MzUtMC4wNTNDMC4yODIsMC40OTcsMCwxLjAzLDAsMS42MTd2MzQuMTcxYzAsMC42MTMsMC4zMDYsMS4xNDYsMC43NzYsMS40MzljMC40NzEsMC4yNjcsMS4wNTksMC4yMTMsMS40ODItMC4xNmw3LjQ4Mi02LjM0NGw2Ljg0NywxMi4xNTVjMC4yNTksMC40OCwwLjcyOSwwLjc0NiwxLjIsMC43NDZjMC4yMzUsMCwwLjQ5NC0wLjA4LDAuNzA2LTAuMjEzbDYuOTg4LTQuNTg1YzAuMzI5LTAuMjEzLDAuNTY1LTAuNTg2LDAuNjU5LTEuMDEzYzAuMDk0LTAuNDI2LDAuMDI0LTAuODgtMC4xODgtMS4yMjZsLTYuMzc2LTExLjM4Mmw4LjYxMS0yLjc0NUMyOC43MDUsMjIuMjc0LDI5LjEwNSwyMS43NjgsMjkuMTc1LDIxLjE1NXogTTE2Ljk2NCwyMi43MDFjLTAuNDI0LDAuMTMzLTAuNzc2LDAuNTA2LTAuOTQxLDAuOTZjLTAuMTY1LDAuNDgtMC4xMTgsMS4wMTMsMC4xMTgsMS40MzlsNi41ODgsMTEuNzgxbC00LjU0MSwyLjk4NWwtNi44OTQtMTIuMzE1Yy0wLjIxMi0wLjM3My0wLjU0MS0wLjY0LTAuOTQxLTAuNzJjLTAuMDk0LTAuMDI3LTAuMTY1LTAuMDI3LTAuMjU5LTAuMDI3Yy0wLjMwNiwwLTAuNTg4LDAuMTA3LTAuODQ3LDAuMzJMMi44LDMyLjU5VjQuNTQ5bDIxLjU5OSwxNS44MDZMMTYuOTY0LDIyLjcwMXoiLz48L2c+PC9nPjwvZz48L2c+PC9zdmc+),auto!important;
+}
+
+/* Link Mode */
+body.linkmode a {
+    background-color: #ff0!important;
+    color: #000 !important;
+}
+
+body.linkmode a {
+    border: 5px solid #ff0 !important;
+}
+
+body.linkmode a .card{
+    outline: 5px solid #ff0!important;
+}
+body.linkmode a span,
+body.linkmode a i {
+    color: #000;
+}
+
+/* Headingmode */
+body.headingmode h1,
+body.headingmode h2,
+body.headingmode h3,
+body.headingmode h4,
+body.headingmode h5,
+body.headingmode h6 {
+    background: #ff0!important;
+    color: #000 !important;
+}
+
+/* Reading Guide Line */
+#reading-guide {
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background-color: #683091;
+    z-index: 99999999;
+    top: 0;
+}
+/* Accessibility */
