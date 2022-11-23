@@ -81,10 +81,15 @@ button:focus {
 
 body.darkmode button,
 body.darkmode img,
-body.darkmode a,
 body.darkmode video,
+body.darkmode form,
 body.darkmode iframe {
     filter: invert(90) contrast(100%) !important;
+}
+
+body.darkmode button,
+body.darkmode button span,
+body.darkmode button i {
     color: #000 !important;
 }
 
@@ -93,7 +98,9 @@ body.darkmode article,
 body.darkmode aside,
 body.darkmode footer, 
 body.darkmode header, 
-body.darkmode li, 
+body.darkmode a, 
+body.darkmode i, 
+body.darkmode .link, 
 body.darkmode nav, 
 body.darkmode div,
 body.darkmode ol,
@@ -106,8 +113,10 @@ body.darkmode h4,
 body.darkmode h5, 
 body.darkmode h6,
 body.darkmode p {
-    color: #fff!important;
+    color: #fff !important;
 }
+
+
 
 body.darkmode,
 body.darkmode footer,

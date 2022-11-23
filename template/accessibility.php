@@ -64,15 +64,9 @@
                 <button id="resetClass" type="button" aria-label="Reset" title="Reset" class="setAccessibility " data-accessibility="reset">
                     <strong class=""><i class="fas fa-redo-alt "></i></strong>
                     <?php
-                        _e( 'Reset', 'accessbee' );
+                        _e( 'Reset Accessibility', 'accessbee' );
                     ?>
                 </button>
-                <a href="https://www.nvaccess.org/files/nvda/releases/2020.4/nvda_2020.4.exe" aria-label="Download Screen Reader" title="Download Screen Reader" class="setAccessibility text-decoration-none " download="">
-                    <strong class=""><i class="fas fa-download "></i></strong>
-                    <?php
-                        _e( 'Download Screen Reader', 'accessbee' );
-                    ?>
-                </a>
             </div>
         </div>
     </div>
