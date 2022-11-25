@@ -1,7 +1,7 @@
-=== Access Bee ===
+=== Nous Access ===
 Contributors: saifullahsiddique
 Donate link: https://saifullah.co
-Tags: access-bee
+Tags: nousaccess, wp-accessibility, accessibility, wordpress accessibility
 Requires at least: 6.1.1
 Tested up to: 6.1.1
 Stable tag: 1.0.0
@@ -9,7 +9,7 @@ Requires PHP: 8.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Access Bee
+Nous Access
 
 == Description ==
 

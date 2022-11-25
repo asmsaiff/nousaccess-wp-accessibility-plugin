@@ -2,17 +2,17 @@
     /**
      *  Web Accessibility
      *
-     *  @package     AccessBee
+     *  @package     Nous Access
      *  @author      Saifullah Siddique
      *  @copyright   2022 Saifullah Siddique
      *  @license     GPL-2.0+
      *
      *  @wordpress-plugin
-     *  Plugin Name: Access Bee
+     *  Plugin Name: Nous Access
      *  Description: Helps improve accessibility in your WordPress site.
      *  Author: Saifullah Siddique
      *  Author URI: http://www.saifullah.co
-     *  Text Domain: accessbee
+     *  Text Domain: nousaccess
      *  License:     GPL-2.0+
      *  License URI: http://www.gnu.org/license/gpl-2.0.txt
      *  Version: 1.0.0
@@ -33,27 +33,27 @@
         // Exit if accessed directly.
     }
     
-    define( 'ACCESSBEE_PATH', plugin_dir_path( __FILE__ ) );
+    define( 'NOUSACCESS_PATH', plugin_dir_path( __FILE__ ) );
 
-    function custom_content_after_body_open_tag() {
-        require_once ACCESSBEE_PATH . 'template/accessibility.php';
+    function nousaccess_after_body_open_tag() {
+        require_once NOUSACCESS_PATH . 'template/accessibility.php';
     }
-    add_action('wp_body_open', 'custom_content_after_body_open_tag');
+    add_action('wp_body_open', 'nousaccess_after_body_open_tag');
 
     /**
      * Enqueue stylesheets for WP Accessibility.
      */
-    function wpa_stylesheet() {
+    function nousaccess_stylesheet() {
         // Add CSS
-        wp_register_style( 'accessbee-css', plugins_url('/access-bee/css/accessbee.css'));
-        wp_enqueue_style( 'accessbee-css' );
-        wp_register_style( 'bootstrap-css', plugins_url('/access-bee/css/bootstrap.css'));
+        wp_register_style( 'nousaccess-css', plugins_url('/nousaccess/css/nousaccess.css'));
+        wp_enqueue_style( 'nousaccess-css' );
+        wp_register_style( 'bootstrap-css', plugins_url('/nousaccess/css/bootstrap.css'));
         wp_enqueue_style( 'bootstrap-css' );
-        wp_register_style( 'fa-css', plugins_url('/access-bee/css/all.css'));
+        wp_register_style( 'fa-css', plugins_url('/nousaccess/css/all.css'));
         wp_enqueue_style( 'fa-css' );
 
         // Add JS
-        wp_register_script( 'accessbee-js', plugins_url('/access-bee/js/accessbee.js'));
-        wp_enqueue_script( 'accessbee-js' );
+        wp_register_script( 'nousaccess-js', plugins_url('/nousaccess/js/nousaccess.js'));
+        wp_enqueue_script( 'nousaccess-js' );
     }
-    add_action( 'wp_enqueue_scripts', 'wpa_stylesheet' );
+    add_action( 'wp_enqueue_scripts', 'nousaccess_stylesheet' );
