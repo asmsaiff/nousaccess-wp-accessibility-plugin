@@ -45,15 +45,15 @@
      */
     function nousaccess_stylesheet() {
         // Add CSS
-        wp_register_style( 'nousaccess-css', plugins_url('/nousaccess/css/nousaccess.css'));
+        wp_register_style( 'nousaccess-css', plugins_url( '/css/nousaccess.css', __FILE__ ));
         wp_enqueue_style( 'nousaccess-css' );
-        wp_register_style( 'bootstrap-css', plugins_url('/nousaccess/css/bootstrap.css'));
+        wp_register_style( 'bootstrap-css', plugins_url( '/css/bootstrap.css', __FILE__ ));
         wp_enqueue_style( 'bootstrap-css' );
-        wp_register_style( 'fa-css', plugins_url('/nousaccess/css/all.css'));
+        wp_register_style( 'fa-css', plugins_url('/css/all.css', __FILE__));
         wp_enqueue_style( 'fa-css' );
 
         // Add JS
-        wp_register_script( 'nousaccess-js', plugins_url('/nousaccess/js/nousaccess.js'));
+        wp_register_script( 'nousaccess-js', plugins_url( '/js/nousaccess.js', __FILE__ ), null, time(), true );
         wp_enqueue_script( 'nousaccess-js' );
     }
     add_action( 'wp_enqueue_scripts', 'nousaccess_stylesheet' );
